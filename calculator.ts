@@ -32,6 +32,11 @@ function multiplication(x:number,y:number): number {
 }
 
 function division(x:number,y:number): number {
+   if (y === 0) {
+      // If attempting to divide by zero, throw an error
+      // example of never
+      throw Error("Division by zero");
+  }
    return x/y;
 }
 
@@ -44,8 +49,8 @@ function concateString(x:string,y:string): string {
 }
 
 // const userInput1: number = getUserInputInt();
-
-while(start)
+try{
+   while(start)   
 {
    var operation: any = parseFloat(getUserInputInt()); 
 switch(operation) { 
@@ -117,4 +122,18 @@ case 6: {
    } 
 }
    
+}
+
+
+}
+
+catch(e){
+
+   if(e instanceof Error)
+   {
+
+      console.error("Calculator Error:", e.message);
+   }
+
+
 }
