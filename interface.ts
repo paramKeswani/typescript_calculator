@@ -1,9 +1,9 @@
 interface shape<T>
 {
-    length:number;
-    width:number;
-    getArea():number;
-    getPerimeter():number;
+    length:T;
+    width:T;
+    getArea():T;
+    getPerimeter():T;
 
 }
 

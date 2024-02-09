@@ -19,7 +19,7 @@ var user = /** @class */ (function () {
         this.email = e;
     }
     user.prototype.getUserInfo = function () {
-        return "username :" + this.username + "email :" + this.username;
+        return "username : " + this.username + " email : " + this.username;
     };
     return user;
 }());
@@ -32,7 +32,7 @@ var Admin = /** @class */ (function (_super) {
         return _this;
     }
     Admin.prototype.grantAccess = function (User) {
-        console.log("admin" + this.adminName + "grants access to user " + User.getUserInfo());
+        console.log("admin " + this.adminName + " grants access to user " + User.getUserInfo());
     };
     return Admin;
 }(user));
@@ -41,14 +41,14 @@ var DataManager = /** @class */ (function () {
         this.data = data;
     }
     DataManager.prototype.getData = function (admin) {
-        return "The data is : " + this.data + " admin is :" + admin.getUserInfo();
+        return "The data is : " + this.data + " admin is : " + admin.getUserInfo();
     };
     return DataManager;
 }());
 var norm_user = new user("soham", "abc@gmail.com");
-norm_user.getUserInfo();
+console.log(norm_user.getUserInfo());
 var administrator = new Admin("param", "abc@gmail.com", "shivam", "xyz@gmail.com");
 administrator.getUserInfo();
-administrator.grantAccess(norm_user);
+console.log(administrator.grantAccess(norm_user));
 var d_m = new DataManager("hello");
 console.log(d_m.getData(administrator));

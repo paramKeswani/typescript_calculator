@@ -54,7 +54,7 @@ class DataManager
 
 let norm_user = new user("soham","abc@gmail.com");
 
-console.log(norm_user.getUserInfo(););
+console.log(norm_user.getUserInfo());
 
 let administrator = new Admin("param","abc@gmail.com","shivam","xyz@gmail.com");
 administrator.getUserInfo();
